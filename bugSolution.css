@@ -1,0 +1,23 @@
+/* bugSolution.css */
+
+.element {
+  width: calc(100% - 20px);
+  /* Correct: Ensures spaces around the minus operator */
+  height: calc(200px + 5em);  /* Correct: uses units and spaces */
+  margin: calc( (100vh - 100px) / 2 ); /* Correct: Uses parenthesis for order of operations and a single calc() */
+  /* Avoid overly complex nested calc() functions for readability */
+}
+
+/* Solution to avoid negative values*/
+.element2 {
+  width: calc(min(100% - 20px, 0));
+}
+
+/*Solution to the unit problem */
+.element3{
+  width: calc(100% - 20);
+}
+/* The unit problem can be solved this way too*/
+.element4{
+  width: calc(100% - 20px);
+}
